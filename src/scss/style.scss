@@ -1,0 +1,7 @@
+@import 'fonts';
+@import 'vars';
+
+body {
+  background-color: darkslategray;
+  @extend %font-title;
+}

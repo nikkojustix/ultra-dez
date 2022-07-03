@@ -1,0 +1,20 @@
+//colors
+$color-white: #fff;
+
+$color-text: #444;
+$color-text-light: #555;
+$color-text-dark: #222;
+
+$color-primary: #73a337;
+$color-primary-light: #8cc14c;
+$color-primary-dark: #587d2a;
+$color-secondary: #fc8507;
+
+//шрифты
+$font-family-primary: 'Jost', sans-serif;
+$font-size-regular: 14px;
+
+%font-title {
+  font-weight: 700;
+  color: $color-text-dark;
+}
