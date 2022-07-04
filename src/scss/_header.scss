@@ -1,0 +1,46 @@
+.header {
+  margin-top: 35px;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+  }
+
+  &__nav {
+  }
+
+  &__menu-list {
+  }
+
+  &__menu-link {
+  }
+
+  &__contacts {
+  }
+
+  &__contacts-item {
+    &--medium {
+    }
+  }
+
+  &__links {
+  }
+
+  &__links-item {
+  }
+
+  &__links-link {
+    &--small {
+    }
+  }
+
+  &__links-btn {
+  }
+}
+.logo {
+  &__img {
+    width: 445px;
+  }
+}

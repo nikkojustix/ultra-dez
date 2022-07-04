@@ -1,0 +1,11 @@
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-regular;
+  background-color: $color-white;
+}
+
+.container {
+  max-width: 1900;
+  margin: 0 auto;
+  padding: 0 35px;
+}

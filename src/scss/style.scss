@@ -1,7 +1,5 @@
 @import 'fonts';
 @import 'vars';
+@import 'global';
 
-body {
-  background-color: darkslategray;
-  @extend %font-title;
-}
+@import 'header';
