@@ -148,14 +148,16 @@
 
   &__services-item {
     position: relative;
+    padding-bottom: 10px;
     &:hover {
-      // .header__services-submenu {
-      //   display: block;
-      // }
+      .header__services-submenu-list {
+        display: flex;
+      }
     }
   }
 
   &__services-link {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 8px;
@@ -166,10 +168,36 @@
     color: $color-white;
     text-shadow: 0 1px 1px #485861;
     transition: 0.3s;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -200px;
+      width: 90px;
+      height: 100%;
+      transform: skew(-20deg, 0deg);
+      opacity: 0.3;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.03) 1%,
+        rgba(255, 255, 255, 0.6) 30%,
+        rgba(255, 255, 255, 0.85) 50%,
+        rgba(255, 255, 255, 0.85) 70%,
+        rgba(255, 255, 255, 0.85) 71%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
 
     &:hover,
     &:focus {
       background-color: $color-primary;
+      &::after {
+        left: 130%;
+        transition: 0.6s ease-out;
+      }
     }
   }
 
@@ -179,28 +207,23 @@
     margin-right: 9px;
   }
 
-  &__services-submenu {
+  ul &__services-submenu-list {
     position: absolute;
+    display: none;
     width: 500px;
     margin-top: 10px;
-    padding: 6px 8px;
+    padding: 6px 4px;
     background: $color-white;
     border: 3px solid $color-primary-light;
     border-radius: 9px;
-    box-shadow: 0 10px 20px -12px rgb(0 0 0 / 32%),
-      0 3px 20px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
-  }
-
-  &__services-submenu-list {
-    position: relative;
-    display: flex;
+    box-shadow: 0 10px 20px -12px rgb(0 0 0 / 32%), 0 3px 20px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
     flex-wrap: wrap;
     z-index: 1;
     &::before {
       position: absolute;
       content: '';
       margin-left: 30px;
-      top: -28px;
+      top: -22px;
       border: 10px solid transparent;
       border-bottom: 10px solid $color-primary-light;
     }
@@ -221,7 +244,7 @@
     &:focus {
       color: $color-white;
       text-shadow: 0 1px 1px #485861;
-      background-color: $color-primary-dark;
+      background-color: $color-primary;
     }
   }
 }
