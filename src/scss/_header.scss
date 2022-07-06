@@ -126,6 +126,10 @@
     }
   }
 
+  &__services {
+    margin-bottom: 35px;
+  }
+
   &__services-list {
     display: flex;
     gap: 10px;
@@ -195,6 +199,11 @@
     margin-right: 9px;
   }
 
+  &__services-submenu {
+    position: relative;
+    z-index: 100;
+  }
+
   ul &__services-submenu-list {
     position: absolute;
     display: none;
@@ -239,12 +248,15 @@
   &__sticky {
     position: fixed;
     top: 0;
+    left: 0;
     display: flex;
     align-items: center;
-    width: calc(100% - 70px);
+    width: 100%;
+    padding: 0 35px;
     background-color: $color-white;
     transform: translateY(-100%);
     transition: 0.2s;
+    z-index: 100;
     &--visible {
       transform: translateY(0);
     }

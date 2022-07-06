@@ -1,6 +1,7 @@
 <footer class="footer"></footer>
 
-<div class="modal">
+<!-- modal callback -->
+<div class="modal" id="modal-callback">
   <div class="modal__inner">
     <div class="modal__header">
       <div class="modal__title">ОСТАВИТЬ ЗАЯВКУ НА ЗВОНОК</div>
@@ -9,6 +10,85 @@
     <div class="modal__body">
       <form class="form" id="form-callback">
         <input type="hidden" name="subject" value="Заявка на звонок" />
+        <label class="form__label form__label--name">
+          <input class="form__input" type="text" name="name" placeholder="Ваше Имя" required />
+        </label>
+        <label class="form__label form__label--phone">
+          <input class="form__input form__input--phone" name="phone" type="tel" placeholder="Номер телефона" required />
+        </label>
+        <input type="submit" name="submit" class="form__btn" value="Отправить" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- modal request -->
+<div class="modal" id="modal-request">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__title">Заявка на вызов специалиста</div>
+      <div class="modal__close">&#10006;</div>
+    </div>
+    <div class="modal__body">
+      <form class="form" id="form-callback">
+        <input type="hidden" name="subject" value="Заявка на вызов специалиста" />
+        <label class="form__label form__label--services">
+          <select class="form__input form__input--select" name="services" required>
+            <option value="">Укажите вид услуги</option>
+            <option value="Уничтожение тараканов">Уничтожение тараканов</option>
+            <option value="Уничтожение клопов">Уничтожение клопов</option>
+            <option value="Уничтожение клещей">Уничтожение клещей</option>
+            <option value="Уничтожение ос">Уничтожение ос</option>
+            <option value="Уничтожение комаров">Уничтожение комаров</option>
+            <option value="Уничтожение шершней">Уничтожение шершней</option>
+            <option value="Уничтожение муравьев">Уничтожение муравьев</option>
+            <option value="Уничтожение блох">Уничтожение блох</option>
+            <option value="Уничтожение вшей">Уничтожение вшей</option>
+            <option value="Уничтожение моли">Уничтожение моли</option>
+            <option value="Уничтожение минирующей тли">Уничтожение минирующей тли</option>
+            <option value="Уничтожение грызунов">Уничтожение грызунов</option>
+            <option value="Уничтожение бактерий и вирусов">Уничтожение бактерий и вирусов</option>
+            <option value="Уничтожение грибка">Уничтожение грибка</option>
+            <option value="Уничтожение плесени">Уничтожение плесени</option>
+            <option value="Профилактика и лечение деревьев">Профилактика и лечение деревьев</option>
+            <option value="Другое">Другое</option>
+          </select>
+        </label>
+        <label class="form__label form__label--place">
+          <select class="form__input form__input--select" name="place" required>
+            <option value="">Укажите тип объекта</option>
+            <option value="Комната">Комната</option>
+            <option value="Квартира">Квартира</option>
+            <option value="Частный дом">Частный дом</option>
+            <option value="Садовый участок">Садовый участок</option>
+            <option value="Подъезд">Подъезд</option>
+            <option value="Подвал">Подвал</option>
+            <option value="Складское помещение">Складское помещение</option>
+            <option value="Техническое помещение">Техническое помещение</option>
+            <option value="Гостиница / отель">Гостиница / отель</option>
+            <option value="Кафе / ресторан">Кафе / ресторан</option>
+            <option value="Магазин">Магазин</option>
+            <option value="Школа / сад">Школа / сад</option>
+            <option value="Больница">Больница</option>
+            <option value="Другое">Другое</option>
+          </select>
+        </label>
+        <label class="form__label form__label--area">
+          <input class="form__input" type="number" name="area" placeholder="Площадь объекта (м²)" required />
+        </label>
+        <label class="form__label form__label--date">
+          <select class="form__input form__input--select" name="date" required>
+            <option value="">Как срочно нужна обработка?</option>
+            <option value="Сегодня">Сегодня</option>
+            <option value="Завтра">Завтра</option>
+            <option value="На выходных">На выходных</option>
+            <option value="Через 1 неделю">Через 1 неделю</option>
+            <option value="Пока думаю">Пока думаю</option>
+          </select>
+        </label>
+        <label class="form__label form__label--address">
+          <input class="form__input" type="text" name="address" placeholder="Адрес" required />
+        </label>
         <label class="form__label form__label--name">
           <input class="form__input" type="text" name="name" placeholder="Ваше Имя" required />
         </label>
