@@ -1,8 +1,11 @@
 /* Указываем box sizing */
+html {
+  box-sizing: border-box;
+}
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 /* Убираем внутренние отступы */

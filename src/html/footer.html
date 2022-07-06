@@ -1,16 +1,22 @@
 <footer class="footer"></footer>
 
-<div class="graph-modal">
-  <div
-    class="graph-modal__container"
-    role="dialog"
-    aria-modal="true"
-    data-graph-target="callback"
-  >
-    <button
-      class="btn-reset graph-modal__close js-modal-close"
-      aria-label="Закрыть модальное окно"
-    ></button>
-    <div class="graph-modal__content">1</div>
+<div class="modal">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__title">ОСТАВИТЬ ЗАЯВКУ НА ЗВОНОК</div>
+      <div class="modal__close">&#10006;</div>
+    </div>
+    <div class="modal__body">
+      <form class="form" id="form-callback">
+        <input type="hidden" name="subject" value="Заявка на звонок" />
+        <label class="form__label form__label--name">
+          <input class="form__input" type="text" name="name" placeholder="Ваше Имя" required />
+        </label>
+        <label class="form__label form__label--phone">
+          <input class="form__input form__input--phone" name="phone" type="tel" placeholder="Номер телефона" required />
+        </label>
+        <input type="submit" name="submit" class="form__btn" value="Отправить" />
+      </form>
+    </div>
   </div>
 </div>

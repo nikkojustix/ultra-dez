@@ -5,8 +5,112 @@ body {
   background-color: $color-white;
 }
 
+.locked {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1900;
   margin: 0 auto;
   padding: 0 35px;
+}
+
+//modal
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  display: none;
+
+  &__inner {
+    padding: 25px;
+    width: 540px;
+    max-width: calc(100% - 30px);
+    border-radius: 4px;
+    background-color: $color-white;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin: -25px -25px 15px -25px;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    background: $color-primary-light;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 13pt;
+    font-weight: 500;
+    text-shadow: 0 1px 1px #485861;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__close {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__input {
+    padding: 10px;
+    padding-left: 30px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: $color-text;
+  }
+
+  &__label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    &::before {
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-55%);
+      content: '';
+      background-size: cover;
+      width: 16px;
+      height: 16px;
+    }
+
+    &--name::before {
+      background-image: url('@img/person.svg');
+    }
+    &--phone::before {
+      background-image: url('@img/phone-dark.svg');
+    }
+  }
+  &__btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: $color-secondary;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    transition: 0 0.3s;
+    &:hover,
+    &:focus {
+      background-color: $color-secondary-dark;
+    }
+  }
 }
