@@ -15,9 +15,21 @@ window.addEventListener('scroll', () => {
 });
 
 // modal
-flsFunctions.bindModal('.header__links-btn', '#modal-callback', '#modal-callback .modal__close');
-flsFunctions.bindModal('.header__sticky-btn', '#modal-callback', '#modal-callback .modal__close');
-flsFunctions.bindModal('.banner__btn', '#modal-request', '#modal-request .modal__close');
+flsFunctions.bindModal(
+  '.header__links-btn',
+  '#modal-callback',
+  '#modal-callback .modal__close'
+);
+flsFunctions.bindModal(
+  '.header__sticky-btn',
+  '#modal-callback',
+  '#modal-callback .modal__close'
+);
+flsFunctions.bindModal(
+  '.banner__btn',
+  '#modal-request',
+  '#modal-request .modal__close'
+);
 
 // phone mask
 const element = document.querySelector('.form__input--phone');

@@ -131,11 +131,9 @@
   }
 
   &__services-list {
-    display: flex;
+    display: grid;
     gap: 10px;
-    & > * {
-      width: 16.666%;
-    }
+    grid-template-columns: repeat(6, 1fr);
   }
 
   &__services-item {
@@ -213,7 +211,8 @@
     background: $color-white;
     border: 3px solid $color-primary-light;
     border-radius: 9px;
-    box-shadow: 0 10px 20px -12px rgb(0 0 0 / 32%), 0 3px 20px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    box-shadow: 0 10px 20px -12px rgb(0 0 0 / 32%),
+      0 3px 20px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
     flex-wrap: wrap;
     z-index: 1;
     &::before {
@@ -328,7 +327,8 @@
     background: $color-white;
     border: 3px solid $color-primary-light;
     border-radius: 9px;
-    box-shadow: 0 10px 20px -12px rgb(0 0 0 / 32%), 0 3px 20px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    box-shadow: 0 10px 20px -12px rgb(0 0 0 / 32%),
+      0 3px 20px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
     &::before {
       position: absolute;
       content: '';
