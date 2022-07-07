@@ -1,5 +1,6 @@
 import * as flsFunctions from './modules/functions.js';
 import IMask from 'imask';
+import FsLightbox from 'fslightbox';
 
 flsFunctions.isWebp();
 

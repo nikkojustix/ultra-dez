@@ -20,6 +20,7 @@
     "browser-sync": "latest",
     "del": "latest",
     "fs": "latest",
+    "fslightbox": "^3.3.1",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
