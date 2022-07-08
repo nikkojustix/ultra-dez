@@ -8,7 +8,6 @@ flsFunctions.isWebp();
 const sticky = document.querySelector('.header__sticky');
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 300) {
-    console.log(window.pageYOffset);
     sticky.classList.add('header__sticky--visible');
   } else {
     sticky.classList.remove('header__sticky--visible');
@@ -38,3 +37,11 @@ const maskOptions = {
   mask: '+{7}(000)000-00-00',
 };
 const mask = IMask(element, maskOptions);
+
+// accordion
+flsFunctions.accordion();
+
+// get current year
+// const date = new Date();
+// console.log(date.getFullYear());
+document.querySelector('.current-year').innerHTML = new Date().getFullYear();

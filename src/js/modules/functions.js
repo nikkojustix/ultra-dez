@@ -37,3 +37,34 @@ export function bindModal(trigger, modal, close) {
     }
   });
 }
+
+// Аккордеон
+export function accordion() {
+  const items = document.querySelectorAll('.accordion__item');
+
+  const open = (item) => {
+    const content = item.querySelector('.accordion__content');
+    item.classList.add('accordion__item--active');
+    content.style.maxHeight = content.scrollHeight + 'px';
+  };
+
+  const close = (item) => {
+    const content = item.querySelector('.accordion__content');
+    item.classList.remove('accordion__item--active');
+    content.style.maxHeight = null;
+  };
+
+  items.forEach((item) => {
+    const trigger = item.querySelector('.accordion__trigger');
+    const content = item.querySelector('.accordion__content');
+
+    trigger.addEventListener('click', () => {
+      if (item.classList.contains('accordion__item--active')) {
+        close(item);
+      } else {
+        items.forEach((item) => close(item));
+        open(item);
+      }
+    });
+  });
+}

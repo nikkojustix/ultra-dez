@@ -1,0 +1,114 @@
+.faq {
+  position: relative;
+  padding: 45px 0;
+  background-image: url('@img/bg/faq.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 20px 10px rgb(0 0 0 / 50%);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__phone {
+    color: $color-primary;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      color: $color-primary-dark;
+    }
+  }
+}
+
+.accordion {
+  &__item {
+    max-width: calc(100% / 3 * 2);
+    margin: 0 auto;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &--active {
+      .accordion__trigger {
+        background-color: $color-primary;
+      }
+      .accordion__trigger::before {
+        background-image: url('@img/arrow-down.svg');
+      }
+    }
+  }
+
+  &__trigger {
+    position: relative;
+    padding: 10px 15px;
+    background-color: $color-primary-light;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url('@img/plus.svg');
+      background-size: cover;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary;
+    }
+  }
+
+  &__title {
+    font-size: 27px;
+    color: $color-white;
+    font-weight: 500;
+    text-shadow: 0 1px 1px #485861;
+    padding-left: 35px;
+  }
+
+  &__content {
+    display: block;
+    margin: 0 10px;
+    max-height: 0;
+    will-change: max-height;
+    background-color: $color-white;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: max-height 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  &__text {
+    padding: 10px 15px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}

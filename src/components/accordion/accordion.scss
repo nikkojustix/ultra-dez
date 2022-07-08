@@ -1,5 +1,73 @@
 .accordion {
   &__item {
+    max-width: calc(100% / 3 * 2);
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &--active {
+      .accordion__content {
+        display: block;
+      }
+    }
+  }
+
+  &__trigger {
+    position: relative;
+    padding: 10px 15px;
+    background-color: $color-primary-light;
+    border-radius: 3px;
+    transition: 0.3s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url('@img/plus.svg');
+      background-size: cover;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary;
+    }
+
+    &--active {
+      &::before {
+        background-image: url('@img/arrow-down.svg');
+      }
+    }
+  }
+
+  &__title {
+    font-size: 27px;
+    color: $color-white;
+    font-weight: 500;
+    text-shadow: 0 1px 1px #485861;
+    padding-left: 35px;
+  }
+
+  &__content {
+    display: none;
+    background-color: $color-white;
+    padding: 10px 15px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 10px;
+  }
+}
+
+.accordion {
+  &__item {
     border-bottom: 1px solid #c4c4c4;
 
     &--active {
