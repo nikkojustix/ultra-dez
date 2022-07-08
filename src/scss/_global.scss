@@ -21,6 +21,15 @@ body {
   overflow: hidden;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main {
+  flex-grow: 1;
+}
+
 .container {
   max-width: 1900px;
   margin: 0 auto;
@@ -149,5 +158,11 @@ body {
     &:focus {
       background-color: $color-secondary-dark;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 25px;
   }
 }

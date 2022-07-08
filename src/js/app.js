@@ -6,8 +6,10 @@ flsFunctions.isWebp();
 
 // sticky header
 const sticky = document.querySelector('.header__sticky');
+const stickyOffset =
+  window.innerWidth >= 992 ? 300 : sticky.getBoundingClientRect().top - 15;
 window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
+  if (window.pageYOffset > stickyOffset) {
     sticky.classList.add('header__sticky--visible');
   } else {
     sticky.classList.remove('header__sticky--visible');
@@ -25,11 +27,11 @@ flsFunctions.bindModal(
   '#modal-callback',
   '#modal-callback .modal__close'
 );
-flsFunctions.bindModal(
-  '.banner__btn',
-  '#modal-request',
-  '#modal-request .modal__close'
-);
+// flsFunctions.bindModal(
+//   '.banner__btn',
+//   '#modal-request',
+//   '#modal-request .modal__close'
+// );
 
 // phone mask
 const element = document.querySelector('.form__input--phone');
@@ -42,6 +44,21 @@ const mask = IMask(element, maskOptions);
 flsFunctions.accordion();
 
 // get current year
-// const date = new Date();
-// console.log(date.getFullYear());
 document.querySelector('.current-year').innerHTML = new Date().getFullYear();
+
+// mobile menu
+const menuBtn = document.querySelector('.menu__btn');
+menuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const menu = document.querySelector('.menu');
+  const menuList = document.querySelector('.menu__list');
+  menu.classList.add('menu--opened');
+  menuList.style.transform = 'translateX(0)';
+
+  menu.addEventListener('click', (e) => {
+    if (e.target === menu) {
+      menuList.style.transform = 'translateX(-100%)';
+      menu.classList.remove('menu--opened');
+    }
+  });
+});

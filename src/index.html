@@ -2,35 +2,37 @@
 <html lang="ru">
   @@include('html/head.html', { "title": "Главная" })
   <body>
-    @@include('html/header.html')
+    <div class="wrapper">
+      @@include('html/header.html')
 
-    <main>
-      <!-- БАННЕР  -->
-      @@include('html/sections/banner.html')
+      <main class="main">
+        <!-- БАННЕР  -->
+        @@include('html/sections/banner.html')
 
-      <!-- НАШИ УСЛУГИ  -->
-      @@include('html/sections/services.html')
+        <!-- НАШИ УСЛУГИ  -->
+        <!-- @@include('html/sections/services.html') -->
 
-      <!-- ПРЕДОСТАВЛЯЕМ СКИДКИ НА НАШИ УСЛУГИ  -->
-      @@include('html/sections/discount.html')
+        <!-- ПРЕДОСТАВЛЯЕМ СКИДКИ НА НАШИ УСЛУГИ  -->
+        <!-- @@include('html/sections/discount.html') -->
 
-      <!-- ПОЧЕМУ ВЫБИРАЮТ НАС  -->
-      @@include('html/sections/advantages.html')
+        <!-- ПОЧЕМУ ВЫБИРАЮТ НАС  -->
+        <!-- @@include('html/sections/advantages.html') -->
 
-      <!-- ПРОИЗВОДИМ ОБРАБОТКУ ЛЮБЫХ ОБЪЕКТОВ!  -->
-      @@include('html/sections/objects.html')
+        <!-- ПРОИЗВОДИМ ОБРАБОТКУ ЛЮБЫХ ОБЪЕКТОВ!  -->
+        <!-- @@include('html/sections/objects.html') -->
 
-      <!-- ФОТОГРАФИИ НАШИХ РАБОТ  -->
-      @@include('html/sections/gallery.html')
+        <!-- ФОТОГРАФИИ НАШИХ РАБОТ  -->
+        <!-- @@include('html/sections/gallery.html') -->
 
-      <!-- КАК СДЕЛАТЬ ЗАКАЗ  -->
-      @@include('html/sections/steps.html')
+        <!-- КАК СДЕЛАТЬ ЗАКАЗ  -->
+        <!-- @@include('html/sections/steps.html') -->
 
-      <!-- ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ  -->
-      @@include('html/sections/faq.html')
-    </main>
+        <!-- ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ  -->
+        <!-- @@include('html/sections/faq.html') -->
+      </main>
 
-    @@include('html/footer.html')
+      @@include('html/footer.html')
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>
