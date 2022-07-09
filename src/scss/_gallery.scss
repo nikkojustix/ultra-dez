@@ -25,11 +25,6 @@
   }
 
   &__title {
-    margin-bottom: 45px;
-    font-size: 35px;
-    line-height: 1;
-    font-weight: 500;
-    text-transform: uppercase;
     color: $color-white;
   }
 
@@ -85,5 +80,22 @@
       background-size: cover;
       opacity: 0.8;
     }
+  }
+}
+
+@media (max-width: 1199px) {
+  .gallery__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 474px) {
+  .gallery__items {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

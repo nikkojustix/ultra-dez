@@ -23,11 +23,6 @@
   }
 
   &__title {
-    margin-bottom: 45px;
-    font-size: 35px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
     text-shadow: 0px 1px 1px $color-white;
     color: $color-primary;
   }
@@ -90,5 +85,31 @@
 
   &__descr {
     font-size: 21px;
+  }
+}
+
+@media (max-width: 991px) {
+  .discount__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .discount {
+    &__item {
+      display: block;
+    }
+    &__label {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 32px;
+      letter-spacing: normal;
+    }
+    &__value {
+      font-size: 32px;
+      padding: 5px 15px;
+    }
+    &__descr {
+      display: block;
+    }
   }
 }

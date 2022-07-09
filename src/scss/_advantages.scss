@@ -24,12 +24,6 @@
   }
 
   &__title {
-    margin-bottom: 30px;
-    font-size: 35px;
-    line-height: 1;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
     color: $color-white;
   }
 
@@ -43,6 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     max-width: 310px;
     width: 100%;
     color: $color-white;
@@ -68,5 +63,22 @@
 
   &__descr {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .advantages__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .advantages__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 474px) {
+  .advantages__items {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

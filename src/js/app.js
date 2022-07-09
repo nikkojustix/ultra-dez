@@ -27,18 +27,20 @@ flsFunctions.bindModal(
   '#modal-callback',
   '#modal-callback .modal__close'
 );
-// flsFunctions.bindModal(
-//   '.banner__btn',
-//   '#modal-request',
-//   '#modal-request .modal__close'
-// );
+flsFunctions.bindModal(
+  '.banner__btn',
+  '#modal-request',
+  '#modal-request .modal__close'
+);
 
 // phone mask
-const element = document.querySelector('.form__input--phone');
+const elements = document.querySelectorAll('.form__input--phone');
 const maskOptions = {
   mask: '+{7}(000)000-00-00',
 };
-const mask = IMask(element, maskOptions);
+elements.forEach((element) => {
+  const mask = IMask(element, maskOptions);
+});
 
 // accordion
 flsFunctions.accordion();
@@ -47,18 +49,37 @@ flsFunctions.accordion();
 document.querySelector('.current-year').innerHTML = new Date().getFullYear();
 
 // mobile menu
-const menuBtn = document.querySelector('.menu__btn');
+const menuBtn = document.querySelector('.menu-btn');
 menuBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const menu = document.querySelector('.menu');
   const menuList = document.querySelector('.menu__list');
   menu.classList.add('menu--opened');
+  document.body.classList.add('locked');
   menuList.style.transform = 'translateX(0)';
-
   menu.addEventListener('click', (e) => {
     if (e.target === menu) {
       menuList.style.transform = 'translateX(-100%)';
       menu.classList.remove('menu--opened');
+      document.body.classList.remove('locked');
     }
+  });
+});
+
+// scroll to top
+const scrollBtn = document.querySelector('.scroll-to-top');
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 200) {
+    scrollBtn.style.visibility = 'visible';
+    scrollBtn.style.opacity = '1';
+  } else {
+    scrollBtn.style.visibility = 'hidden';
+    scrollBtn.style.opacity = '0';
+  }
+});
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
   });
 });

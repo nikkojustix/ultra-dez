@@ -88,3 +88,31 @@
     animation: pulse 2s infinite;
   }
 }
+
+@media (max-width: 991px) {
+  .banner {
+    &__img-wrapper {
+      display: none;
+    }
+
+    &__content {
+      width: auto;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .banner__list-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 474px) {
+  .banner__title {
+    font-size: 34px;
+  }
+}
