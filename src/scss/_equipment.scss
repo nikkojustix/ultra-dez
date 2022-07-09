@@ -1,0 +1,82 @@
+.equipment {
+  position: relative;
+  padding: 45px 0;
+  background-image: url('@img/bg/equipment.jpg');
+  background-size: cover;
+  background-position: center;
+  border-top: 4px solid $color-primary-light;
+  box-shadow: inset 0 0 20px 10px rgb($color-white, 0.5);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba($color-white, 0.8);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  &__title {
+    color: $color-text-dark;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 360px;
+    width: 100%;
+    padding: 5px 15px;
+    background: $color-white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px $color-primary-light, 0 3px 20px 0 rgb(0 0 0 / 12%),
+      0 8px 10px -5px rgb(0 0 0 / 20%);
+  }
+
+  &__img {
+    position: relative;
+    width: 260px;
+  }
+
+  &__name {
+    margin: 0 0 20px;
+    font-size: 21px;
+    font-weight: 500;
+    color: $color-text-dark;
+  }
+
+  ul.equipment__info-list {
+    font-size: 16px;
+    text-align: left;
+    list-style-type: circle;
+    margin: 0 0 15px;
+    padding: 0 0 0 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .equipment__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .equipment__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

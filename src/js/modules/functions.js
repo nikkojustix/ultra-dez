@@ -21,11 +21,13 @@ export function bindModal(trigger, modal, close) {
   close = document.querySelector(close);
 
   const body = document.body;
-  trigger.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.style.display = 'flex';
-    body.classList.add('locked');
-  });
+  if (trigger != null) {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = 'flex';
+      body.classList.add('locked');
+    });
+  }
   close.addEventListener('click', () => {
     modal.style.display = 'none';
     body.classList.remove('locked');

@@ -34,6 +34,19 @@ body {
   max-width: 1900px;
   margin: 0 auto;
   padding: 0 35px;
+  &--content {
+    max-width: 1220px;
+  }
+}
+
+.content {
+  padding: 30px 0;
+  &__inner {
+    font-size: 18px;
+    & > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .section {
@@ -46,6 +59,19 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
+}
+
+.title {
+  color: $color-white;
+  padding: 30px 0;
+  background: $color-primary;
+  text-align: center;
+  text-shadow: 0 1px 1px #485861;
+  &__name {
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }
 
 //modal
@@ -252,6 +278,10 @@ body {
   .section-title {
     font-size: 30px;
     margin-bottom: 30px;
+  }
+
+  .title__name {
+    font-size: 34px;
   }
 
   .accordion {
