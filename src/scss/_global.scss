@@ -74,6 +74,20 @@ body {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 //modal
 .modal {
   position: fixed;
@@ -139,6 +153,10 @@ body {
     &--select {
       padding-left: 25px;
     }
+    &--message {
+      height: auto;
+      max-width: 100%;
+    }
   }
 
   &__label {
@@ -174,8 +192,14 @@ body {
     &--name::before {
       background-image: url('@img/person.svg');
     }
+    &--email::before {
+      background-image: url('@img/at.svg');
+    }
     &--phone::before {
       background-image: url('@img/phone-dark.svg');
+    }
+    &--message::before {
+      background-image: url('@img/keyboard.svg');
     }
   }
   &__btn {
@@ -187,7 +211,7 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 4px;
-    transition: 0 0.3s;
+    transition: 0.3s;
     &:hover,
     &:focus {
       background-color: $color-secondary-dark;

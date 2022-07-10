@@ -26,9 +26,6 @@
     width: 33.333%;
   }
 
-  &__img {
-  }
-
   &__content {
     width: 66.666%;
     padding: 30px 0;
@@ -48,6 +45,17 @@
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
+  }
+
+  &__price {
+    display: inline-block;
+    padding: 2px 10px;
+    margin-bottom: 15px;
+    font-size: 27px;
+    font-weight: 500;
+    color: $color-text-dark;
+    background-color: $color-white;
+    border-radius: 5px;
   }
 
   &__list {
@@ -112,7 +120,12 @@
 }
 
 @media (max-width: 474px) {
-  .banner__title {
-    font-size: 34px;
+  .banner {
+    &__title {
+      font-size: 34px;
+    }
+    &__price {
+      font-size: 20px;
+    }
   }
 }

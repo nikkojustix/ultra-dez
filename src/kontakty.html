@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "Контактная информация" })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="main">
+        <!-- Заголовок  -->
+        @@include('html/sections/title.html', {"h1": "Контактная информация"})
+        <section class="content">
+          <div class="container container--content">
+            <div class="content__inner">
+              <div class="contacts">
+                <div class="contacts__content">
+                  <h3 class="contacts__type">Телефон:</h3>
+                  <p class="contacts__info">
+                    <a class="contacts__phone" href="tel:+74957976653"
+                      >+7(495)797-66-53</a
+                    >
+                  </p>
+                  <p class="contacts__info">
+                    <a class="contacts__phone" href="tel:+79037976653"
+                      >+7(903)797-66-53</a
+                    >
+                  </p>
+                  <h3 class="contacts__type">Email:</h3>
+                  <p class="contacts__info">
+                    <a
+                      class="contacts__email"
+                      href="mailto:ultra-dez.ru@yandex.ru"
+                      >ultra-dez.ru@yandex.ru</a
+                    >
+                  </p>
+                  <h3 class="contacts__type">Время работы:</h3>
+                  <p class="contacts__info">Круглосуточно</p>
+                  <h3 class="contacts__type">Адрес:</h3>
+                  <p class="contacts__info">
+                    г.Москва, Ленинградский проспект, 62
+                  </p>
+                </div>
+                <div class="contacts__form">
+                  <h3 class="contacts__type">Отправить сообщение:</h3>
+                  <form class="form" id="form-callback">
+                    <input
+                      type="hidden"
+                      name="subject"
+                      value="Сообщение с контактной формы"
+                    />
+                    <label class="form__label form__label--name">
+                      <input
+                        class="form__input"
+                        type="text"
+                        name="name"
+                        placeholder="Ваше Имя"
+                        required
+                      />
+                    </label>
+                    <label class="form__label form__label--email">
+                      <input
+                        class="form__input"
+                        type="email"
+                        name="email"
+                        placeholder="Ваш E-mail"
+                        required
+                      />
+                    </label>
+                    <label class="form__label form__label--phone">
+                      <input
+                        class="form__input form__input--phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="Номер телефона"
+                        required
+                      />
+                    </label>
+                    <label class="form__label form__label--message">
+                      Сообщение:
+                      <textarea
+                        class="form__input form__input--message"
+                        name="message"
+                        rows="5"
+                        required
+                      >
+                      </textarea>
+                    </label>
+                    <input
+                      type="submit"
+                      name="submit"
+                      class="form__btn"
+                      value="Отправить"
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="map">
+          <div class="container">
+            <div class="map__inner">
+              <h3 class="visually-hidden">Мы на карте</h3>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
