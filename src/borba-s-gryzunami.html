@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { "title": "Главная" })
+  @@include('html/head.html', { "title": "Борьба с грызунами" })
   <body>
     <div class="wrapper">
       @@include('html/header.html')
 
       <main class="main">
-        <!-- БАННЕР  -->
-        @@include('html/sections/banner.html', { "banner-title": "Дезинфекция помещений и участков", "banner-price": "" })
-
-        <!-- НАШИ УСЛУГИ  -->
-        @@include('html/sections/services.html')
+        <!-- БАННЕР -->
+        @@include('html/sections/banner.html', { "banner-title": "Борьба с грызунами", "banner-price": "35" })
 
         <!-- ПРЕДОСТАВЛЯЕМ СКИДКИ НА НАШИ УСЛУГИ  -->
         @@include('html/sections/discount.html')
@@ -29,6 +26,9 @@
 
         <!-- ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ  -->
         @@include('html/sections/faq.html')
+
+        <!-- ДРУГИЕ УСЛУГИ -->
+        @@include('html/sections/other-services.html')
       </main>
 
       @@include('html/footer.html')
